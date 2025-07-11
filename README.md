@@ -50,7 +50,7 @@ python mange.py startapp polls
 - wsgi 同步程式碼設定
 - asgi 異步程式碼設定
 
-# 為什麼 Ｔemplate 需要創建兩層？  
+# 為什麼 Template 需要創建兩層？  
 ./myblog/mysite/app/templates/app/index.html
 為什麼要在創建一個app目錄呢？
 因為在 django 裡面會以 app 為單位區分每個功能，例如：首頁，購物車，如果每個 app 下都有 index.html 會無法區分，所以需要在 Templates 目錄下載創建一個與 app 相同的名稱．
@@ -64,7 +64,7 @@ python mange.py startapp polls
   {% static 'css/navbar.css' %} 先使用{% load static %}即可引入
   {% static 'js/jquery.js' %}
 
-  需要到 setting.py 貼上以下這段做設定
+  需要到 setting.py 貼上以下這段做設定，記得 import os
   STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
   ]
